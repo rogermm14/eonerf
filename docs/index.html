@@ -132,7 +132,61 @@
 		gtag('js', new Date());
 
 		gtag('config', 'UA-75863369-6');
+
 	</script>
+
+
+	<script>
+		document.addEventListener('DOMContentLoaded', domReady);
+
+		function domReady() {
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[0],
+		        textPosition: 'top'
+		    });
+
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[1],
+		        hideTexts: true,
+		        textPosition: 'center'
+		    });
+
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[2]
+		    });
+
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[3],
+		        linesOrientation: 'vertical',
+		        textPosition: 'left',
+		        arrayBackgroundColorText: ['#000000', '#FFFFFF'],
+		        arrayColorText: ['#FFFFFF', '#000000'],
+		        linesColor: 'rgb(0,0,0)'
+		    });
+
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[4],
+		        linesOrientation: 'vertical',
+		        textPosition: 'right'
+		    });
+
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[5],
+		        textPosition: 'bottom'
+		    });
+
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[6],
+		        filters: ['blur(3px)', 'grayscale(1)', 'sepia(1)', 'saturate(3)']
+		    });
+		    new Dics({
+		        container: document.querySelectorAll('.b-dics')[7],
+		        rotate: '45deg'
+		    });
+
+		}
+    </script>
+
 </head>
 
 <body>
@@ -279,8 +333,8 @@
     <br>
     
        <hr>
-	<center><h1>Geometrically consistent shadows</h1></center>
-	    	<center>
+	<center><h1>Geometrically Consistent Shadows</h1></center>
+	   </center>
 		<table align=center width=1200px>
 			<tr>
 				<td width=160px>
@@ -300,13 +354,20 @@
 				</td>
 			</tr>
 		</table>
+		<table align=center width=850px>
+		<tr>
+			<td align=justify>
+                EO-NeRF computes geometrically consistent shadows by projecting auxiliary rays from the surface boundary towards the position of the sun. This strategy provides hints to refine the geometry, which in turn refines the rendered shadows.
+			</td>
+		</tr>
+		</table>
 	</center>
 	<br>
 	
 	
 	<hr>
 
-	<center><h1>Method outputs in detail</h1></center>
+	<center><h1>Method Outputs in Detail</h1></center>
 	<table align=center width=400px>
 		<tr>
 			<td align=center width=400px>
@@ -320,7 +381,7 @@
 		<center>
 			<tr>
 				<td align=justify>
-                    Left to right: (a) Input image, (b) albedo, (c) geometric shadows, (d) transient phenomena, (e) uncertainty coefficient, <br> (f) altitude (g) albedo with geometric shadows irradiance, (h) albedo with geometric shadows irradiance after affine transformation, (i) albedo with geometric shadows and transient phenomena irradiance after affine transformation.
+                    Left to right: (a) Input image, (b) albedo, (c) geometric shadows, (d) transient phenomena, (e) uncertainty coefficient, (f) altitude (g) albedo with geometric shadows irradiance, (h) albedo with geometric shadows irradiance after affine transformation, (i) albedo with geometric shadows and transient phenomena irradiance after affine transformation.
 				</td>
 			</tr>
 		</center>
@@ -330,6 +391,30 @@
         </tr>
 	</table>
 	<br>
+	<hr>
+
+	<center><h1>Geometry Comparison</h1></center>
+	<link rel="stylesheet" href="src/dics.original.css">
+	<script src="src/dics.original.js"></script>
+	<center>
+	    <div class="b-dics" style="width: 1000px">
+		<img src="mesh_gallery/lidar.png" alt="LiDAR">
+		<img src="mesh_gallery/eonerf.png" alt="EO-NeRF">
+		<img src="mesh_gallery/satnerf.png" alt="Sat-NeRF">
+		<img src="mesh_gallery/mgm.png" alt="MVS (MGM)">
+		<img src="mesh_gallery/psm.png" alt="MVS (PSM)">
+	    </div>
+	<table align=center width=850px>
+		<center>
+		<tr>
+			<td align=center>
+                Check the <a href='https://rogermm14.github.io/eonerf/viewer/compare.html'>auxiliary viewer</a> to easily compare only two methods at a time.
+			</td>
+		</tr>
+		</center>
+	</table>
+	</center>
+
 	<hr>
 	<table align=center width=450px>
 		<center><h1>Paper</h1></center>
@@ -363,6 +448,7 @@
 				<left>
 					<center><h1>Acknowledgements</h1></center>
 					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+					The code for comparing multiple images with sliders can be found <a href="https://www.cssscript.com/compare-multiple-images-dics/">here</a>, while the auxiliary viewer was created from this <a href="https://github.com/loetcodes/multiple-image-comparison-slider/">demo</a>.
 				</left>
 			</td>
 		</tr>
