@@ -1,0 +1,8 @@
+@InProceedings{Mari_2023_CVPR,
+    author    = {Mar{\'\i}, Roger and Facciolo, Gabriele and Ehret, Thibaud},
+    title     = {Multi-Date Earth Observation NeRF: The Detail Is in the Shadows},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2023},
+    pages     = {2034-2044}
+}

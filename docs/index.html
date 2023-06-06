@@ -138,8 +138,235 @@
 <body>
 	<br>
 	<center>
-		<span style="font-size:36px">Coming soon</span>
+		<span style="font-size:36px">Multi-Date Earth Observation NeRF</span>
         <br>
+        <span style="font-size:24px">&nbsp;The Detail Is in the Shadows</span>
+        <br><br>
+		<table align=center width=600px>
+			<table align=center width=600px>
+				<tr>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://scholar.google.com/citations?user=TgpSmIsAAAAJ&hl=en">Roger Mar&iacute;</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="http://gfacciol.github.io">Gabriele Facciolo</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a href="https://tehret.github.io/">Thibaud Ehret</a></span>
+						</center>
+					</td>
+				</tr>
+			</table>
+			<table align=center width=480px>
+				<tr>
+					<td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf'>[Paper]</a></span>
+						</center>
+					</td>
+                    <td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='https://github.com/centreborelli/eonerf/releases/tag/EarthVision2023'>[Data]</a></span><br>
+						</center>
+					</td>
+                    <td align=center width=120px>
+						<center>
+							<span style="font-size:24px"><a href='./bibtex.txt'>[Bibtex]</a></span><br>
+						</center>
+					</td>
+				</tr>
+			</table>
+		</table>
+	</center>
+    <br>
+    <table align=center width=850px>
+		<center>
+			<tr>
+				<td align=center>
+                    Project developed at the <a href='https://centreborelli.ens-paris-saclay.fr/fr'>ENS Paris-Saclay, Centre Borelli</a> and accepted at the <a href='https://www.grss-ieee.org/events/earthvision-2023/'>CVPR EarthVision Workshop 2023</a>.<br>
+				</td>
+			</tr>
+		</center>
+	</table>
+
+	<hr>
+
+	<table align=center width=850px>
+		<center><h1>Abstract</h1></center>
+		<tr>
+			<td align=justify>
+                We introduce EO-NeRF, the Earth Observation NeRF. This method can be used for digital surface modeling and novel view synthesis using collections of multi-date remote sensing images. In contrast to previous variants of NeRF for satellite imagery, EO-NeRF outperforms the altitude accuracy of advanced pipelines for 3D reconstruction from multiple satellite images, including classic and learned stereo-based methods. This is largely due to a rendering of building shadows strictly consistent with the geometry of the scene and independent from other transient phenomena. A number of strategies are additionally presented with the aim to exploit satellite imagery out of the box, without requiring usual pre-processing steps such as a relative radiometric normalization of the input images or a bundle adjustment of the associated camera models. We evaluate our method on different areas of interest using sets of 10-20 true color and pansharpened WorldView-3 images.
+			</td>
+		</tr>
+	</table>
+	<br>
+
+    
+    <br>
+	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+					        <span style="font-size:20px">Example input views (subset)</span><br><br>
+						<img class="round" style="width:375px" src="./IARPA_003/input_views.png"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+					        <span style="font-size:20px">EO-NeRF renderings</span><br><br>
+						<img class="round" style="width:400px" src="./IARPA_003/rgb-opt-10.gif"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+					        <span style="font-size:20px">EO-NeRF altitude</span><br><br>
+						<img class="round" style="width:400px" src="./IARPA_003/depth-opt-10.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+    
+    	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+						<img class="round" style="width:375px" src="./JAX_214/input_views.png"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<img class="round" style="width:400px" src="./JAX_214/rgb-opt-10.gif"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<img class="round" style="width:400px" src="./JAX_214/depth-opt-10.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+    
+    	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+						<img class="round" style="width:375px" src="./IARPA_001/input_views.png"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<img class="round" style="width:400px" src="./IARPA_001/rgb-opt-10.gif"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<img class="round" style="width:400px" src="./IARPA_001/depth-opt-10.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+    <br>
+    
+       <hr>
+	<center><h1>Geometrically consistent shadows</h1></center>
+	    	<center>
+		<table align=center width=1200px>
+			<tr>
+				<td width=160px>
+					<center> 
+						<img class="round" style="width:400px" src="./IARPA_003/shadows-opt-10.gif"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<img class="round" style="width:400px" src="./JAX_214/shadows-opt-10.gif"/>
+					</center>
+				</td>
+				<td width=160px>
+					<center>
+						<img class="round" style="width:400px" src="./IARPA_001/shadows-opt-10.gif"/>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+	<br>
+	
+	
+	<hr>
+
+	<center><h1>Method outputs in detail</h1></center>
+	<table align=center width=400px>
+		<tr>
+			<td align=center width=400px>
+				<center>
+					<img width="1000px" src="./outputs.png"/>
+				</center>
+			</td>
+		</tr>
+	</table>
+	<table align=center width=850px>
+		<center>
+			<tr>
+				<td align=justify>
+                    Left to right: (a) Input image, (b) albedo, (c) geometric shadows, (d) transient phenomena, (e) uncertainty coefficient, <br> (f) altitude (g) albedo with geometric shadows irradiance, (h) albedo with geometric shadows irradiance after affine transformation, (i) albedo with geometric shadows and transient phenomena irradiance after affine transformation.
+				</td>
+			</tr>
+		</center>
+	</table>
+	<table align=center width=800px>
+		<tr>
+        </tr>
+	</table>
+	<br>
+	<hr>
+	<table align=center width=450px>
+		<center><h1>Paper</h1></center>
+		<tr>
+			<td><a href=""><img class="layered-paper-big" style="height:175px" src="./paper.png"/></a></td>
+			<td><span style="font-size:14pt">R. Mar&iacute;, G. Facciolo, <br>T. Ehret.<br>
+				<b>Multi-Date Earth Observation NeRF: <br>The Detail Is in the Shadows.</b><br>
+				In CVPR Workshops, 2023.<br>
+				(<a href="https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf">camera ready</a>)<br> 
+				<span style="font-size:4pt"><a href=""><br></a>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<br>
+
+	<table align=center width=600px>
+		<tr>
+			<td><span style="font-size:14pt"><center>
+				<a href="./bibtex.txt">[Bibtex]</a>
+			</center></td>
+		</tr>
+	</table>
+
+	<hr>
+	<br>
+
+	<table align=center width=900px>
+		<tr>
+			<td width=400px>
+				<left>
+					<center><h1>Acknowledgements</h1></center>
+					This template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">colorful</a> ECCV project; the code can be found <a href="https://github.com/richzhang/webpage-template">here</a>.
+				</left>
+			</td>
+		</tr>
+	</table>
 
 <br>
 </body>
