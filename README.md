@@ -5,7 +5,7 @@
 Developed at the [ENS Paris-Saclay, Centre Borelli](https://centreborelli.ens-paris-saclay.fr/fr) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
 
 ### [Multi-Date Earth Observation NeRF: The Detail Is in the Shadows](https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf)
-*[Roger Marí](https://scholar.google.com/citations?user=TgpSmIsAAAAJ&hl=en), 
+*[Roger Marí](https://rogermm14.github.io/),
 [Gabriele Facciolo](http://dev.ipol.im/~facciolo/),
 [Thibaud Ehret](https://tehret.github.io/)*
 
