@@ -1,6 +1,6 @@
 # EO-NeRF
 
-### [[Project page]](https://rogermm14.github.io/eonerf)
+### [[Project page]](https://rogermm14.github.io/eonerf) [[Code]](https://github.com/rogermm14/eonerf_code)
 
 Developed at the [ENS Paris-Saclay, Centre Borelli](https://centreborelli.ens-paris-saclay.fr/fr) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
 
